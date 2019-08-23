@@ -5,12 +5,12 @@ package main
 import "testing"
 
 // Funçaõ de teste
-func TestSoma(t *testing.T) {
+func TestReturn(t *testing.T) {
 
-	resultado := soma(5,5)
+	resultado := greeting("Code.education Rocks!!")
 
-	if resultado != 10 {
-		t.Errorf("A soma está incorreta, retornou %d, quando deveria retornar %d.", resultado, 10)
+	if resultado != "<b>Code.education Rocks!!/b>" {
+		t.Errorf("Erro")
 	}
 
 	
