@@ -26,3 +26,7 @@ Ao fazer um pull para o github o Cloud Build faz o teste da aplicação.
 Deve retornar
 
 <b>Code.education Rocks!</b>
+
+# Endereço da Imagem no Docker Hub
+
+[Acesse aqui](https://hub.docker.com/r/rogeriosims/web-server-go)
