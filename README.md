@@ -1,11 +1,11 @@
-#Servidor Web em Go com CI no Cloud Build
+# Servidor Web em Go com CI no Cloud Build
 
 O servidor escuta a porta 8000 e responde com uma mensagem ao ser acessado.
 
 Ao fazer um pull para o github o Cloud Build faz o teste da aplicação.
 
 
-# Executar no docker
+## Executar no docker
 
 1. Clonar repositório
 

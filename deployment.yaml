@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment # Tipo do objeto
+
+metadata:
+ name: web-service # Nome do deploy
+ labels:
+  app: web-server
+
+spec: # Especificações do deployment
+ replicas: 3
+
+ selector: # Selector utilizado para criar o service
+  matchLabels:
+   app: web-server
+
+ template: #referente ao POD
+  metadata:
+   labels:
+    app: web-server
+
+  spec:
+   containers:
+   - name: web-server-go
+     image: gcr.io/curso-codeeducation/webserver-go
+     ports:
+     - containerPort: 8000
