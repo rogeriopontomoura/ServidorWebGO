@@ -1,0 +1,22 @@
+FROM golang:1.12.6-alpine3.10 AS builder
+
+RUN mkdir /app
+
+COPY main.go /app/
+
+WORKDIR /app
+
+RUN chmod -R 777 /app 
+
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-w -s" -o /app/main
+
+
+FROM scratch
+
+# Copia o arquivo do container de construção
+COPY --from=0 /app/main .
+
+COPY --from=0 /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
+
+# Seta o entrypoint
+ENTRYPOINT ["./main"]
