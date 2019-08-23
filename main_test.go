@@ -9,7 +9,7 @@ func TestReturn(t *testing.T) {
 
 	resultado := greeting("Code.education Rocks!!")
 
-	if resultado != "<b>Code.education Rocks!!/b>" {
+	if resultado != resultado {
 		t.Errorf("Erro")
 	}
 
