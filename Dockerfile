@@ -18,4 +18,4 @@ COPY ./ $GOPATH/src
 WORKDIR $GOPATH
 
 # Executa o programa
-CMD go run ./src/server.go
+CMD go run ./src/main.go

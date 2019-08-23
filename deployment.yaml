@@ -7,7 +7,7 @@ metadata:
   app: web-server
 
 spec: # Especificações do deployment
- replicas: 3
+ replicas: 2
 
  selector: # Selector utilizado para criar o service
   matchLabels:
